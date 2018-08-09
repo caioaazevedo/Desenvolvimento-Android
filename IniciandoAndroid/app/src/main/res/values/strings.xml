@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IniciandoAndroid</string>
+    <string name="btnCalcula">Calcular</string>
 </resources>
