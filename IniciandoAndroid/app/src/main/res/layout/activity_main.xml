@@ -7,21 +7,16 @@
     tools:context=".MainActivity">
 
    <Button
-       android:id="@+id/btnCalcula"
-       android:text="@string/btnCalcula"
+       android:id="@+id/btnCombustivel"
+       android:text="@string/btnCombustivel"
        android:layout_width="match_parent"
        android:layout_height="wrap_content" />
-   <EditText
-       android:id="@+id/edtTexto1"
-       android:hint="Valor da Gasolina"
+
+   <Button
+       android:id="@+id/btnAutonomia"
+       android:text="@string/btnAutonomia"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:layout_below="@id/btnCalcula"/>
-   <EditText
-       android:id="@+id/edtTexto2"
-       android:hint="Valor do Alcool"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/edtTexto1"/>
+       android:layout_below="@id/btnCombustivel"/>
 
 </RelativeLayout>
