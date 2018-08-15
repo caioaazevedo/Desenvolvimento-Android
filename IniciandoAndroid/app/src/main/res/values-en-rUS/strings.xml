@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IniciandoAndroid</string>
+    <string name="btnCombustivel">Fuel</string>
+    <string name="btnAutonomia">Autonomy</string>
+    <string name="btnCalcula">Calculate</string>
+</resources>

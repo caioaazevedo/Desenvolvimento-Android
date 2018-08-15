@@ -11,8 +11,8 @@ public class AutonomiaActivity extends Activity implements View.OnClickListener{
 
     Button btn;
 
-    EditText edtKm;
-    EditText edtLitros;
+    EditText editKm;
+    EditText editLitros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,10 @@ public class AutonomiaActivity extends Activity implements View.OnClickListener{
 
 
     public double obtemCalculo(){
-        edtKm = findViewById(R.id.edtGas);
-        edtLitros = findViewById(R.id.edtAlcool);
-        String txt = edtKm.getText().toString();
-        String txt2 = edtLitros.getText().toString();
+        editKm = findViewById(R.id.edtKm);
+        editLitros = findViewById(R.id.edtLitros);
+        String txt = editKm.getText().toString();
+        String txt2 = editLitros.getText().toString();
         double km = Double.parseDouble(txt);
         double litros = Double.parseDouble(txt2);
 
@@ -41,8 +41,8 @@ public class AutonomiaActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        double num = 1.59;
-        String msg = Double.toString(num);
+        double num = obtemCalculo();
+        String msg = String.valueOf(num);
         String txtMsg = msg+" Km/L";
 
         Toast.makeText(this, txtMsg, Toast.LENGTH_LONG).show();
