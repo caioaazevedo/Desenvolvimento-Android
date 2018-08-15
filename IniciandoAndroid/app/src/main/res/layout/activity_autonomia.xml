@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AutonomiaActivity">
+
+    <Button
+        android:id="@+id/btnCalculaAutonomia"
+        android:text="@string/btnCalcula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edtKm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalculaAutonomia"
+        android:hint="Km percorridos"/>
+
+    <EditText
+        android:id="@+id/edtLitros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtKm"
+        android:hint="Litros de Gasolina"/>
+
+</RelativeLayout>
