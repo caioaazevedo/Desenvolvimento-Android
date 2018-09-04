@@ -1,10 +1,12 @@
 package com.example.caioalmeida.iniciandoandroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class CombustivelActivity extends Activity implements View.OnClickListener{
@@ -14,6 +16,8 @@ public class CombustivelActivity extends Activity implements View.OnClickListene
     EditText txt1;
     EditText txt2;
 
+    ImageView imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +26,9 @@ public class CombustivelActivity extends Activity implements View.OnClickListene
         btn = findViewById(R.id.btnCalculaCombustivel);
         btn.setOnClickListener(this);
 
+        imageView = findViewById(R.id.imageCombustivel);
+
+        imageView.setImageResource(R.drawable.combustivel);
     }
 
     public double obtemCalculo(){
@@ -39,9 +46,13 @@ public class CombustivelActivity extends Activity implements View.OnClickListene
 
     public void showResult(){
         if(obtemCalculo() >= 0.7){
-            Toast.makeText(this, "Melhor abastecer com Gasolina", Toast.LENGTH_LONG).show();
+            Intent intentGas = new Intent(CombustivelActivity.this, GasolinaActivity.class);
+            startActivity(intentGas);
+            //Toast.makeText(this, "Melhor abastecer com Gasolina", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Melhor abastecer com Álcool", Toast.LENGTH_LONG).show();
+            Intent intentAlcool = new Intent(CombustivelActivity.this, AlcoolActivity.class);
+            startActivity(intentAlcool);
+            //Toast.makeText(this, "Melhor abastecer com Álcool", Toast.LENGTH_LONG).show();
         }
     }
 
