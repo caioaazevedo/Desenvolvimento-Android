@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".CombustivelActivity" />
-        <activity android:name=".AutonomiaActivity"></activity>
+        <activity android:name=".AutonomiaActivity" />
+        <activity android:name=".GasolinaActivity" />
+        <activity android:name=".AlcoolActivity"></activity>
     </application>
 
 </manifest>

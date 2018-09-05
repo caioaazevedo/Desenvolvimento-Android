@@ -26,4 +26,11 @@
         android:layout_below="@id/edtGas"
         android:hint="Preço do Álcool"/>
 
+    <ImageView
+        android:id="@+id/imageCombustivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtAlcool"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ExemploListView</string>
+    <string-array name="arrayCarros">
+        <item>Fiat PALIO</item>
+        <item>Volkswagen GOL</item>
+        <item>BMW Z4</item>
+    </string-array>
 </resources>
