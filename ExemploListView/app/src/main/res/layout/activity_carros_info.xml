@@ -4,27 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".CarrosInfoActivity">
 
     <TextView
-        android:id="@+id/txtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/txtView2"
+        android:id="@+id/textFabricante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtView" />
+        android:layout_centerHorizontal="true"/>
+
     <TextView
-        android:id="@+id/txtView3"
+        android:id="@+id/textModelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtView2" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textFabricante"/>
+
+    <TextView
+        android:id="@+id/textAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textModelo"/>
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/imageCarro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtView3" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
 
 </RelativeLayout>

@@ -19,15 +19,24 @@ public class Carro implements Serializable{
         this.modelo = modelo;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
+    }
+
+    public int getImagem(){
+        return imagem;
+    }
+
+    public void setImagem(int imagem){
+        this.imagem = imagem;
     }
 
     private String fabricante;
     private String modelo;
-    private int ano;
+    private String ano;
+    private int imagem;
 }
