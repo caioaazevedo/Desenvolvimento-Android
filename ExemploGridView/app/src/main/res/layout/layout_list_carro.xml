@@ -15,7 +15,7 @@
     <TextView
         android:id="@+id/textModelo"
         android:text="Modelo"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -23,7 +23,7 @@
     <TextView
         android:id="@+id/textFabricante"
         android:text="Fabricante"
-        android:textSize="17dp"
+        android:textSize="17sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -31,7 +31,7 @@
     <TextView
         android:id="@+id/textAno"
         android:text="Ano"
-        android:textSize="12dp"
+        android:textSize="12sp"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
