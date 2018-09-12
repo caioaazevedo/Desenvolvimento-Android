@@ -1,6 +1,7 @@
 package com.example.caioalmeida.exemplogridview.adapter;
 
 import android.app.Activity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -42,6 +43,11 @@ public class AdapterCarro extends BaseAdapter {
         Carro carro = carrosList.get(position);
 
         convertView = View.inflate(activity, R.layout.layout_list_carro, null);
+
+        //LayoutInflater inflater = activity.getLayoutInflater();
+
+        //convertView = inflater.inflate(R.layout.layout_list_carro, parent, false);
+
 
         TextView modelo = convertView.findViewById(R.id.textModelo);
         TextView fabricante = convertView.findViewById(R.id.textFabricante);

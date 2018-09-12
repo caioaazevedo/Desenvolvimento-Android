@@ -10,7 +10,8 @@
         android:src="@drawable/ic_launcher_background"
         android:layout_gravity="center_horizontal"
         android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_height="100dp"
+        android:padding="5dp"/>
 
     <TextView
         android:id="@+id/textModelo"
@@ -35,13 +36,5 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/buttonCompra"
-        android:text="Comprar"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
 
 </LinearLayout>

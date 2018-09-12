@@ -1,7 +1,10 @@
 package com.example.caioalmeida.exemplogridview.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.example.caioalmeida.exemplogridview.R;
@@ -11,7 +14,7 @@ import com.example.caioalmeida.exemplogridview.model.Carro;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity{
+public class MainActivity extends Activity implements AdapterView.OnItemClickListener{
 
     List<Carro> list_carro;
 
@@ -33,5 +36,13 @@ public class MainActivity extends Activity{
         AdapterCarro adapterCarro = new AdapterCarro(this, list_carro);
 
         gridView.setAdapter(adapterCarro);
+        gridView.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(MainActivity.this, InfoCarroActivity.class);
+        intent.putExtra("objCarro", list_carro.get(position));
+        startActivity(intent);
     }
 }
