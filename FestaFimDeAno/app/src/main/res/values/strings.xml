@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">FestaFimDeAno</string>
+    <string name="hoje">Hoje</string>
+    <string name="diasRestantes">Dias restantes para o fim do ano</string>
+    <string name="participar">Você vai para a festa?</string>
 </resources>
