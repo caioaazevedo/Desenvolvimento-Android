@@ -3,4 +3,7 @@
     <string name="hoje">Hoje</string>
     <string name="diasRestantes">Dias restantes para o fim do ano</string>
     <string name="participar">Você vai para a festa?</string>
+    <string name="naoConfirmado">Não Confirmado</string>
+    <string name="sim">sim</string>
+    <string name="nao">nao</string>
 </resources>

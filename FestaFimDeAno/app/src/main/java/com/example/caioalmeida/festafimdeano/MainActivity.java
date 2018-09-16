@@ -7,9 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.caioalmeida.festafimdeano.constants.FimDeAnoConstants;
+import com.example.caioalmeida.festafimdeano.util.SecurityPreferences;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    ViewHolder mViewHolder = new ViewHolder();
+    private ViewHolder mViewHolder = new ViewHolder();
+    private SecurityPreferences mSecurityPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +25,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.buttonConfirm = findViewById(R.id.buttonConfirm);
 
         this.mViewHolder.buttonConfirm.setOnClickListener(this);
+
+        mSecurityPreferences = new SecurityPreferences(this);
+
+        this.verifyPresence();
     }
 
     @Override
     public void onClick(View v) {
+
+        String presence = this.mSecurityPreferences.getStorageString(FimDeAnoConstants.PRESENCE);
+
         Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra(FimDeAnoConstants.PRESENCE, presence);
         startActivity(intent);
+    }
+
+    private void verifyPresence(){
+        String presence = this.mSecurityPreferences.getStorageString(FimDeAnoConstants.PRESENCE);
+
+        if(presence.equals("")){
+            this.mViewHolder.buttonConfirm.setText(R.string.naoConfirmado);
+        } else if(presence.equals(FimDeAnoConstants.WILL_GO)) {
+            this.mViewHolder.buttonConfirm.setText(R.string.sim);
+        } else {
+            this.mViewHolder.buttonConfirm.setText(R.string.nao);
+        }
     }
 
     private static class ViewHolder{

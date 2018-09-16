@@ -33,6 +33,6 @@
         android:id="@+id/buttonConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirmar"/>
+        android:text="@string/naoConfirmado"/>
 
 </LinearLayout>
