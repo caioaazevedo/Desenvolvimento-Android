@@ -15,4 +15,12 @@
         android:padding="15dp"
         android:gravity="center"/>
 
+    <GridView
+        android:id="@+id/gridObjs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit">
+
+    </GridView>
+
 </LinearLayout>

@@ -1,12 +1,15 @@
 package com.example.caioalmeida.revisaoandroid.activityList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.caioalmeida.revisaoandroid.R;
+import com.example.caioalmeida.revisaoandroid.activity.MainActivity;
+import com.example.caioalmeida.revisaoandroid.activityInfo.InfoCarroActivity;
 import com.example.caioalmeida.revisaoandroid.adapter.listAdapter;
 import com.example.caioalmeida.revisaoandroid.model.Carro;
 
@@ -38,10 +41,14 @@ public class ListMainActivity extends Activity implements AdapterView.OnItemClic
 
         listView.setAdapter(adapterList);
 
+        listView.setOnItemClickListener(this);
+
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Intent intent = new Intent(ListMainActivity.this, InfoCarroActivity.class);
+        intent.putExtra("Obj", list_carro.get(position));
+        startActivity(intent);
     }
 }

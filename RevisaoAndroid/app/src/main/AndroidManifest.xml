@@ -19,7 +19,8 @@
         <activity android:name=".activityList.ListMainActivity" />
         <activity android:name=".activityGrid.GridMainActivity" />
         <activity android:name=".activityCompartilhar.CompartilhaMainActivity" />
-        <activity android:name=".activityRequisicao.RequisicaoMainActivity"></activity>
+        <activity android:name=".activityRequisicao.RequisicaoMainActivity" />
+        <activity android:name=".activityInfo.InfoCarroActivity"></activity>
     </application>
 
 </manifest>

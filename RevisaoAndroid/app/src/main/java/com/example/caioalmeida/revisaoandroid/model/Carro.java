@@ -1,6 +1,8 @@
 package com.example.caioalmeida.revisaoandroid.model;
 
-public class Carro {
+import java.io.Serializable;
+
+public class Carro implements Serializable {
 
     private String modelo;
     private String fabricante;
