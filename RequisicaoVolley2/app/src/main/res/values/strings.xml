@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RequisicaoVolley</string>
+    <string name="Valor">Digite o valor em Dolar $:</string>
+    <string name="valorReal">Valor em Real:</string>
+</resources>

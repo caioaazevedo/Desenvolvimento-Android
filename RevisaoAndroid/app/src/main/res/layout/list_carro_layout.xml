@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageCarro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/corolla"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/textModelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modelo"
+            />
+
+        <TextView
+            android:id="@+id/textFabricante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fabricante"/>
+
+        <TextView
+            android:id="@+id/textAno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ano"/>
+
+    </LinearLayout>
+
+</LinearLayout>

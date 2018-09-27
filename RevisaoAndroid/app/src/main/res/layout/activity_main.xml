@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/titulo"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"/>
+
+
+    <Button
+        android:id="@+id/buttonList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/list"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grid"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonCompartilha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/compartilhamento"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/buttonRequisicao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/requisicao"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

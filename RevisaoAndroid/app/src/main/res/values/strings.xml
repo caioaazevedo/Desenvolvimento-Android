@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RevisaoAndroid</string>
+    <string name="list">List View</string>
+    <string name="grid">Grid View</string>
+    <string name="titulo">Revisão de Funcionalidades</string>
+    <string name="compartilhamento">Compartilhar</string>
+    <string name="requisicao">Requisição</string>
+    <string name="listActivity">List View Activity</string>
+    <string name="gridActivity">Grid View Activity</string>
+    <string name="requisicaoActivity">Requisição Activity</string>
+    <string name="compartilhaActivity">Compartilhamento Activity</string>
+
+    <string-array name="arrayStrings">
+        <item>LIGAR</item>
+        <item>GIT HUB</item>
+        <item>ENVIAR TEXTO</item>
+    </string-array>
+</resources>

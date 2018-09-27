@@ -5,17 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".DetailsActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/participar"/>
+        android:text="@string/participar"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp" />
 
     <CheckBox
         android:id="@+id/checkParticipate"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/participar"/>
+        android:text="@string/participar"
+        android:layout_weight="8"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
