@@ -7,9 +7,26 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
-    ViewHolder mViewHolder = new ViewHolder();
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    String url = "https://economia.awesomeapi.com.br/all";
+
+    EditText editValue;
+    TextView textDollar;
+    TextView textEuro;
+    TextView textValueDollar;
+    TextView textValueEuro;
+    Button buttonCalculate;
 
     double valueDollarQuotation = 4.06;
     double valueEuroQuotation = 4.70;
@@ -19,36 +36,54 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.mViewHolder.editValue = findViewById(R.id.editValue);
-        this.mViewHolder.textDollar = findViewById(R.id.textDollar);
-        this.mViewHolder.textEuro = findViewById(R.id.textEuro);
-        this.mViewHolder.textValueDollar = findViewById(R.id.textValorDolar);
-        this.mViewHolder.textValueEuro = findViewById(R.id.textValorEuro);
-        this.mViewHolder.buttonCalculate = findViewById(R.id.buttonCalculate);
+        editValue = findViewById(R.id.editValue);
+        textDollar = findViewById(R.id.textDollar);
+        textEuro = findViewById(R.id.textEuro);
+        textValueDollar = findViewById(R.id.textValorDolar);
+        textValueEuro = findViewById(R.id.textValorEuro);
+        buttonCalculate = findViewById(R.id.buttonCalculate);
 
-        String stringValueDolar = String.valueOf(valueDollarQuotation);
+        obterCotacao(0.0);
+
         String stringValueEuro = String.valueOf(valueEuroQuotation);
 
-        this.mViewHolder.textValueDollar.setText("Dolar: $ " + stringValueDolar);
-        this.mViewHolder.textValueEuro.setText("Euro: € " + stringValueEuro);
+        textValueEuro.setText("Euro: € " + stringValueEuro);
 
-        this.mViewHolder.buttonCalculate.setOnClickListener(this);
+        buttonCalculate.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Double value = Double.valueOf(this.mViewHolder.editValue.getText().toString());
-        this.mViewHolder.textDollar.setText(" $ " + String.format("%.2f", value / valueDollarQuotation));
-        this.mViewHolder.textEuro.setText(" € " + String.format("%.2f", value / valueEuroQuotation));
+        Double value = Double.valueOf(editValue.getText().toString());
+        obterCotacao(value);
+        textEuro.setText(" € " + String.format("%.2f", value / valueEuroQuotation));
     }
 
-    private static class ViewHolder{
-        EditText editValue;
-        TextView textDollar;
-        TextView textEuro;
-        TextView textValueDollar;
-        TextView textValueEuro;
-        Button buttonCalculate;
+    private void obterCotacao(final double valor) {
+        RequestQueue req = Volley.newRequestQueue(this);
 
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONObject cotacao = response.getJSONObject("USD");
+                            double valorDolar = cotacao.getDouble("bid");
+                            textValueDollar.setText(String.format(" Dolar: $ %.2f", valorDolar));
+                            if (valor != 0.0) {
+                                textDollar.setText(" $ " + String.format("%.2f", valor / valorDolar));
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        req.add(request);
     }
 }
